@@ -8,9 +8,11 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@Messages(key+".html.title")</title>
         @local_stylesheet("stylesheets/main.css")
+        <link rel="icon" type="image/png" href="@routes.Assets.versioned("images/favicon-32x32.png")" sizes="32x32" />
+		<link rel="icon" type="image/png" href="@routes.Assets.versioned("images/favicon-16x16.png")" sizes="16x16" />
+        
         <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
         
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
         @local_script("javascripts/hello.js") { }
         
         @layouts.fragments.bootstrap_css()
