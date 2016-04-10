@@ -1,0 +1,24 @@
+@()
+@import marieetraphael.utils._
+
+@layouts.main("contact") {
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Nous contacter</h1>
+			</div>
+		</div>
+		<div class="row vertical-align">
+			<div class="col-xs-12 text-center">
+				<p>Pour nous écrire : <span class="email">marie[point]lecour@@wanadoo.fr</span> (il faut remplacer le [point] par un ".")</p>
+				<hr />
+				<p>Pour appeler la chef de famille: <a href="tel:0682316181"><span class="phone">06 82 31 61 81</span></a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-offset-4 col-xs-4 text-center">
+				<img class="img-responsive center-block" src="@routes.Assets.versioned("images/justMarried.png")" />
+			</div>
+		</div>
+	</div>
+}

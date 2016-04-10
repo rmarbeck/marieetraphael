@@ -16,8 +16,8 @@ public class ResortList {
 		return instance; 
 	}
 
-	public void add(String name, String city, int price, String details, String availabilty, int travelTimeInMinutes) {
-		this.list.add(Resort.of(name, city, price, details, availabilty, travelTimeInMinutes));
+	public void add(String name, String city, int price, String details, String phoneNumber, String availabilty, int travelTimeInMinutes) {
+		this.list.add(Resort.of(name, city, price, details, phoneNumber, availabilty, travelTimeInMinutes));
 	}
 	
 	public List<Resort> getList() {

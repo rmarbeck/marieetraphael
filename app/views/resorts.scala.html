@@ -2,8 +2,16 @@
 @import marieetraphael.utils._
 
 @defining(ResortList.of()) { resorts =>
-	@{  resorts.add("Hôtels Mercure", "Saint Germain", 4, "01 39 62 XX XX", "Pleine", 20);
-	    resorts.add("Hôtels Ibis", "Maisons Laffitte", 2, "01 39 62 XX XX", "Pleine", 20);
+	@{  resorts.add("Chambre d'hôtes Villa La Riante", "Le Vesinet", 2, "22 avenue Gallieni - 78110 Le Vesinet", "06 69 18 77 76", "Limitée (dépêchez vous&nbsp;!)", 4);
+	    resorts.add("Chambre d'hôtes La Cour d'Anaïte", "Le Vesinet", 2, "31 rue Ernest André - 78110 Le Vesinet", "01 40 17 09 07", "Limitée (dépêchez vous&nbsp;!)", 4);
+	    resorts.add("Hôtel Les Terres Blanches **", "Chatou", 2, "28 rue de Tour du bois - 78400 Chatou", "01 30 15 88 40", "OK (ne tardez pas trop&nbsp;!)", 5);
+	    resorts.add("Hôtel Campanile ***", "Montesson", 2, "9 rue du chant des Oiseaux - 78360 Montesson", "01 30 71 23 05", "OK (ne tardez pas trop&nbsp;!)", 6);
+		resorts.add("Hôtel Mercure ***", "Saint Germain en Laye", 4, "11 avenue des Loges - 78100 Saint Germain en Laye", "01 39 21 50 90", "OK (ne tardez pas trop&nbsp;!)", 10);
+		resorts.add("Hôtel Campanile ***", "Saint Germain en Laye", 3, "Route de Mantes, 6 allée de Pomone - 78100 Saint Germain en Laye", "01 34 51 59 59", "OK (ne tardez pas trop&nbsp;!)", 12);
+		resorts.add("Hôtel Villa des Impressionistes ****", "Bougival", 4, "15 Quai Rennequin Sualem - 78380 Bougival", "01 30 08 40 00", "OK (ne tardez pas trop&nbsp;!)", 12);
+	    resorts.add("Hôtel Ibis ***", "Maisons Laffitte", 3, "6 rue de Paris - 78600 Maisons Laffitte", "01 39 12 20 20", "OK (ne tardez pas trop&nbsp;!)", 15);
+	    
+	    
 	 }
 
 @layouts.main("resorts") {
@@ -14,10 +22,10 @@
 			</div>
 		</div>	
 		<div class="row">
-			<div class="col-xs-3 text-center">
+			<div class="hidden-xs col-sm-3 text-center">
 				<img class="img-responsive center-block" src="@routes.Assets.versioned("images/toML.png")" />
 			</div>
-			<div class="col-xs-9 text-left">
+			<div class="col-xs-12 col-sm-9 text-left">
 				<ul class="description">
 					@for(resort <- resorts.getList) {
 						<li>
@@ -26,10 +34,12 @@
 								<li><span class="key">Ville</span><span class="value">@resort.getCity</span></li>
 								<li><span class="key">Classe de prix</span><span class="value">@for(i <- 1 to resort.getPrice) {€}</span></li>
 								<li><span class="key">Coordonnées</span><span class="value">@resort.getDetails</span></li>
-								<li><span class="key">Disponibilité</span><span class="value">@resort.getAvailability</span></li>
+								<li><span class="key">Téléphone</span><a href="tel:@resort.getPhoneNumber.replace(" ", "")"><span class="value">@resort.getPhoneNumber</span></a></li>
+								<li><span class="key">Disponibilité</span><span class="value">@Html(resort.getAvailability)</span></li>
 								<li><span class="key"><abbr title="Temps nécessaire pour rentrer à l'hôtel en voiture après la soirée">Temps de parcours retour</abbr></span><span class="value">@resort.getTravelTimeInMinutes minutes</span></li>
 							</ul>
 						</li>
+						<hr />
 					}
 				</ul>
 			</div>

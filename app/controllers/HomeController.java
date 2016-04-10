@@ -23,5 +23,18 @@ public class HomeController extends Controller {
     public Result resorts() {
         return ok(resorts.render());
     }
+    
+    public Result gifts() {
+        return ok(gifts.render());
+    }
+    
+    public Result dday() {
+        return ok(dday.render());
+    }
+    
+    public Result contact() {
+        return ok(contact.render());
+    }
+    
 
 }

@@ -5,6 +5,7 @@ public class Resort {
 	String city;
 	int price;
 	String details;
+	String phoneNumber;
 	String availability;
 	int travelTimeInMinutes;
 	
@@ -12,12 +13,13 @@ public class Resort {
 		super();
 	}
 	
-	public static Resort of(String name, String city, int price, String details, String availabilty, int travelTimeInMinutes) {
+	public static Resort of(String name, String city, int price, String details, String phoneNumber, String availabilty, int travelTimeInMinutes) {
 		Resort instance = new Resort();
 		instance.name = name;
 		instance.city = city;
 		instance.price = price;
 		instance.details = details;
+		instance.phoneNumber = phoneNumber;
 		instance.availability = availabilty;
 		instance.travelTimeInMinutes = travelTimeInMinutes;
 		return instance;
@@ -45,5 +47,9 @@ public class Resort {
 
 	public int getTravelTimeInMinutes() {
 		return travelTimeInMinutes;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 }
