@@ -1,0 +1,40 @@
+@()
+@import marieetraphael.utils._
+
+@defining(ResortList.of()) { resorts =>
+	@{  resorts.add("Hôtels Mercure", "Saint Germain", 4, "01 39 62 XX XX", "Pleine", 20);
+	    resorts.add("Hôtels Ibis", "Maisons Laffitte", 2, "01 39 62 XX XX", "Pleine", 20);
+	 }
+
+@layouts.main("resorts") {
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Liste des Hôtels à proximité</h1>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-xs-3 text-center">
+				<img class="img-responsive center-block" src="@routes.Assets.versioned("images/toML.png")" />
+			</div>
+			<div class="col-xs-9 text-left">
+				<ul class="description">
+					@for(resort <- resorts.getList) {
+						<li>
+							@resort.getName
+							<ul>
+								<li><span class="key">Ville</span><span class="value">@resort.getCity</span></li>
+								<li><span class="key">Classe de prix</span><span class="value">@for(i <- 1 to resort.getPrice) {€}</span></li>
+								<li><span class="key">Coordonnées</span><span class="value">@resort.getDetails</span></li>
+								<li><span class="key">Disponibilité</span><span class="value">@resort.getAvailability</span></li>
+								<li><span class="key"><abbr title="Temps nécessaire pour rentrer à l'hôtel en voiture après la soirée">Temps de parcours retour</abbr></span><span class="value">@resort.getTravelTimeInMinutes minutes</span></li>
+							</ul>
+						</li>
+					}
+				</ul>
+			</div>
+		</div>
+	</div>
+}
+
+}

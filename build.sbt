@@ -12,3 +12,6 @@ libraryDependencies ++= Seq(
   javaWs
 )
 
+includeFilter in (Assets, LessKeys.less) := "*.less"
+
+excludeFilter in (Assets, LessKeys.less) := "_*.less"

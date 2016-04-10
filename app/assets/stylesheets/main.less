@@ -1,0 +1,67 @@
+@import "_variables.less";
+
+body {
+	font-family: @theme-font-family !important;
+	color: @theme-grey !important;
+}
+
+h1 {
+	margin-bottom: 2em !important;
+}
+
+.navbar-default {
+	.navbar-toggle .icon-bar {
+    	background-color: @theme-primary !important;
+    }
+    
+    a {
+    	font-size: 1.2em;
+		color: @theme-primary !important;
+		font-family: @theme-font-family !important;
+	}
+	
+	a:hover {
+		color: @theme-light !important;
+	}
+}
+
+#resorts {
+
+	ul.description {
+		font-size: 1em;
+		font-family: @theme-font-family !important;
+		color: @theme-primary !important;
+		font-weight: bold;
+		list-style-type: none;
+		li {
+			margin-bottom: 2em;
+		}
+		
+		ul {
+			color: @theme-grey !important;
+			font-weight: normal;
+			list-style-type: none;
+			
+			li {
+				margin-bottom: 0;
+			}
+		}
+		
+	}
+	
+	@media (min-width: 750px) {
+    	ul.description {
+			font-size: 1.3em;
+		}
+	}
+	
+	span.key {
+		color: @theme-light !important;
+	}
+	
+	span.key::after  {
+		content: " : ";
+	}
+	
+
+}
