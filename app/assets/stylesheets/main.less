@@ -71,15 +71,23 @@ h1 {
 #gifts {
 	p {
 		font-size: 1.5em;
+		margin-bottom: 2em;
 	}
 }
 
 #dday {
 	ul.program {
 		list-style-type: none;
-		font-size: 1.4em;
+		font-size: 1.2em;
+		padding-left: 0;
 		li {
 			margin-bottom: 1em;
+		}
+	}
+	
+	@media (min-width: @above-phone-screen-portrait) {
+    	ul.program {
+			font-size: 1.4em;
 		}
 	}
 	

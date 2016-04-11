@@ -34,9 +34,9 @@
 								<li><span class="key">Ville</span><span class="value">@resort.getCity</span></li>
 								<li><span class="key">Classe de prix</span><span class="value">@for(i <- 1 to resort.getPrice) {€}</span></li>
 								<li><span class="key">Coordonnées</span><span class="value">@resort.getDetails</span></li>
-								<li><span class="key">Téléphone</span><a href="tel:@resort.getPhoneNumber.replace(" ", "")"><span class="value">@resort.getPhoneNumber</span></a></li>
+								<li><span class="key">Téléphone</span><a href="tel:@resort.getPhoneNumber.replace(" ", "")"><span class="value">@Html(resort.getPhoneNumber.replace(" ", "&nbsp;"))</span></a></li>
 								<li><span class="key">Disponibilité</span><span class="value">@Html(resort.getAvailability)</span></li>
-								<li><span class="key"><abbr title="Temps nécessaire pour rentrer à l'hôtel en voiture après la soirée">Temps de parcours retour</abbr></span><span class="value">@resort.getTravelTimeInMinutes minutes</span></li>
+								<li><span class="key"><abbr title="Temps nécessaire pour rentrer à l'hôtel en voiture après la soirée">Temps de parcours retour</abbr></span><span class="value">@resort.getTravelTimeInMinutes&nbsp;minutes</span></li>
 							</ul>
 						</li>
 						<hr />
