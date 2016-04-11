@@ -121,6 +121,18 @@ h1 {
 		display: flex;
 		align-items: center;
 	}
+	
+	// IE 10
+	@media all and (-ms-high-contrast: none) {
+		.vertical-align {
+			display: block;
+		}
+		
+		.vertical-align > [class^="col-"],
+		.vertical-align > [class*=" col-"] {
+			display: block;
+		}	
+	}
 }
 
 #contact {
