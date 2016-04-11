@@ -1,0 +1,22 @@
+@()
+@import marieetraphael.utils._
+
+@layouts.main("notfound") {
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Page non trouvée</h1>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="hidden-xs col-sm-3 text-center">
+				<img class="img-responsive center-block" src="@routes.Assets.versioned("images/trees.png")" />
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<p>Oups ! La page recherchée n'existe pas...</p>
+				<br />
+				<p>Retour à la <a href="@routes.HomeController.index">HOME</a></p>
+			</div>
+		</div>
+	</div>
+}
